@@ -12,23 +12,37 @@
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<div class="navbar-brand">Navbar</div>
+			<div class="navbar-brand">Arlington EATS Entry</div>
 			<ul class="navbar-nav">
-				<li class="nav-item dropdown active">
+				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Enter Inventory</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="nav-item dropdown-item active" href="enter-inventory-sheet.html">Sheet</a>
+						<a class="nav-item dropdown-item" href="https://docs.google.com/spreadsheets/d/160iGmFJ__8Qin3_SJsuqGQugMEFJLE780jb3rq8nDZI/edit#gid=1749232383">Sheet</a>
 						<a class="nav-item dropdown-item" href="enter-inventory-photo.html">Photo</a>
-						<a class="nav-item dropdown-item" href="enter-inventory-form.html">Form</a>
+						<a class="nav-item dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSfUtSLANTZ--jrB3vaK8y2yd_7Gb2h6zu7I1OqKM0Sqm1c8Jw/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link">Form</a>
 					</div>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="upload-gb-food-bank-order.html">Upload GB Food Bank Order</a>
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">Upload GB Food Bank Order</a>
 				</li>
 			</ul>
 		</nav>
-	
 
+		<form>
+			<div class="row">
+				<div class="col">
+					<label for="photoUpload" class="form-label">Submit the Greater Boston Food Bank Order PDF File</label>
+				</div>
+				<div class="col">
+					<input class="form-control-file" type="file" accept="pdf" id="photoUpload" onchange="analyze_image(event)" />
+				</div>
+			</div>
+		</form>
+		<script src="pdf-to-image/dist/pdf-to-image-dist.js"></script>
+		<script src="pdf-to-image/pdfjs/pdf.min.js"></script>
+		<script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
+
+		<script src="photo.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
